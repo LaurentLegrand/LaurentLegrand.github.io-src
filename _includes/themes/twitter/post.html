@@ -20,8 +20,8 @@
   {% endunless %}  
 
   {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="icon-tags"></i></li>
+    <ul class="nav nav-pills">
+<!--      <li><i class="icon-tags"></i></li>-->
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </ul>
@@ -29,7 +29,7 @@
 
     <hr>
     <div class="pagination">
-      <ul>
+      <ul class="pagination">
       {% if page.previous %}
         <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
       {% else %}
