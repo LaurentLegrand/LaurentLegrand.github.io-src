@@ -52,8 +52,7 @@ Where
 	`/JavaVirtualMachine/42/out/val/Machine/freeMemory/myhost/mywebapp`
 * In order to receive operation call, the `JavaVirtualMachine` 42 would subscibe to topics 
 	* `/JavaVirtualMachine/42/in/op/#`; if `id` is kind of UUID, it could only subscribe to `/+/42/in/#`
-	* and to `/+/+/in/op/+/+/myhost/mywebapp`; 
-	if `id` is kind of UUID, it could only subscribe to `/+/42/in/#`
+	* and to `/+/+/in/op/+/+/myhost/mywebapp`
 * An application would subscribe to
 	* `/+/+/out/val/Machine/freeMemory/#` to receive `freeMemory` values from any instance of `Machine`
 	* `/JavaVirtualMachine/+/out/val/Machine/freeMemory/#` to receive `freeMemory` values from any instance of `JavaVirtualMachine`
