@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mqtt | My Blog]]></title>
+  <link href="http://laurentlegrand.github.io/blog/categories/mqtt/atom.xml" rel="self"/>
+  <link href="http://laurentlegrand.github.io/"/>
+  <updated>2013-12-05T00:51:46+01:00</updated>
+  <id>http://laurentlegrand.github.io/</id>
+  <author>
+    <name><![CDATA[Laurent Legrand]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Naming MQTT Topics]]></title>
+    <link href="http://laurentlegrand.github.io/blog/2013/11/30/naming-mqtt-topics/"/>
+    <updated>2013-11-30T23:54:29+01:00</updated>
+    <id>http://laurentlegrand.github.io/blog/2013/11/30/naming-mqtt-topics</id>
+    <content type="html"><![CDATA[<h2>About</h2>
+
+<p>``` coffeescript Coffeescript Tricks start:51 mark:52,54-55</p>
+
+<h1>Given an alphabet:</h1>
+
+<p>alphabet = &lsquo;abcdefghijklmnopqrstuvwxyz&rsquo;</p>
+
+<h1>Iterate over part of the alphabet:</h1>
+
+<p>console.log letter for letter in alphabet[4..8]
+```</p>
+
+<h2>Naming Convention</h2>
+
+<p><code>java Java test
+class Test { }
+</code></p>
+
+<p><code>ebnf
+topic = "/" class "/" id "/" direction "/" command "/" declaring-class "/" feature [qualified-name];
+direction = "in" | "out";
+command = "get" | "set" | "unset" | "val" | "op";
+qualified-name = { "/" STRING };
+</code></p>
+
+<p>Another TEST</p>
+
+<p><code>java Java test
+class Test { }
+</code></p>
+
+<p>Where</p>
+
+<ul>
+<li><code>class</code>: the class of the device</li>
+<li><code>id</code>: the unique id of the device</li>
+<li><code>direction</code> indicates the direction of the message
+
+<ul>
+<li><code>"in"</code>: the message goes to the device</li>
+<li><code>"out"</code>: the message goes from the device</li>
+</ul>
+</li>
+<li><code>command</code>: the command to execute
+
+<ul>
+<li><code>"get"</code>: get the value of the feature</li>
+<li><code>"set"</code>: set the value of the feature</li>
+<li><code>"unset"</code>: unset the value of the feature</li>
+<li><code>"val"</code>: send the value of the feature</li>
+<li><code>"op"</code>: execute an operation on the device</li>
+</ul>
+</li>
+<li><code>declaring-class</code>: the class in which the feature is declared</li>
+<li><code>feature</code>: the feature (property or operation)</li>
+<li><code>qualified-name</code>: the fully qualified name of the device</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Machine case</h3>
+
+<ul>
+<li>A <code>Machine</code> has a property <code>freeMemory</code></li>
+<li>A <code>JavaVirtualMachine</code> is a <code>Machine</code></li>
+<li>A <code>JavaVirtualMachine</code> has an operation called <code>gc</code> which runs the garbage collecor</li>
+<li><p>There is an instance of a <code>JavaVirtualMachine</code> with</p>
+
+<ul>
+<li>id is 42</li>
+<li>is deployed on a host called <code>myhost</code></li>
+<li>is running a web app called <code>mywebapp</code></li>
+<li>qualifiedName is <code>/myhost/mywebapp</code></li>
+</ul>
+</li>
+<li><p>The <code>JavaVirtualMachine</code> 42 would publish its free memory on topic
+  <code>/JavaVirtualMachine/42/out/val/Machine/freeMemory/myhost/mywebapp</code></p></li>
+<li>In order to receive operation call, the <code>JavaVirtualMachine</code> 42 would subscibe to topics
+
+<ul>
+<li><code>/JavaVirtualMachine/42/in/op/#</code>; if <code>id</code> is kind of UUID, it could only subscribe to <code>/+/42/in/#</code></li>
+<li>and to <code>/+/+/in/op/+/+/myhost/mywebapp</code></li>
+</ul>
+</li>
+<li>An application would subscribe to
+
+<ul>
+<li><code>/+/+/out/val/Machine/freeMemory/#</code> to receive <code>freeMemory</code> values from any instance of <code>Machine</code></li>
+<li><code>/JavaVirtualMachine/+/out/val/Machine/freeMemory/#</code> to receive <code>freeMemory</code> values from any instance of <code>JavaVirtualMachine</code></li>
+<li><code>/+/+/out/val/Machine/freeMemory/myhost/#</code> to receive <code>freeMemory</code> values from any instance deployed on <code>myhost</code></li>
+</ul>
+</li>
+<li>An application would publish to <code>/JavaVirtualMachine/42/in/op/JavaVirtualMachine/gc</code> to run the gc on JVM 42</li>
+</ul>
+
+
+<p>Not tested but it should work &hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

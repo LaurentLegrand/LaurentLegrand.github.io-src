@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://laurentlegrand.github.io/blog/2013/11/30/naming-mqtt-topics/</loc>
+        <lastmod>2013-12-05T00:45:42+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://laurentlegrand.github.io/blog/2013/12/04/test/</loc>
+        <lastmod>2013-12-04T23:54:29+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://laurentlegrand.github.io/</loc>
+        <lastmod>2013-12-05T00:45:42+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://laurentlegrand.github.io/blog/archives/</loc>
+        <lastmod>2013-12-05T00:45:42+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://laurentlegrand.github.io/robots.txt</loc>
+        <lastmod>2013-12-04T23:24:11+01:00</lastmod>
+    </url>
+</urlset>
