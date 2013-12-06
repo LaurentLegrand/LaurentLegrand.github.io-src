@@ -6,7 +6,9 @@ comments: true
 categories: mqtt
 ---
 
-## About
+This post is an attempt to define a naming convention for MQTT topic that combines physical and location information. 
+
+<!--more-->
 
 
 ``` antlr A kind of naming convention
@@ -61,9 +63,4 @@ Where
 
 
 Not tested but it should work ...
-
-
-
-
-
 
