@@ -2,6 +2,7 @@
 layout: post
 title: Naming MQTT Topics
 date: 2013-11-30 23:54:29 +0100
+comments: true
 categories: mqtt
 ---
 
