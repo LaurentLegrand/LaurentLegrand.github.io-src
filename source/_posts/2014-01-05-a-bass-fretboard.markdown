@@ -3,7 +3,7 @@ layout: post
 title: "A Bass Fretboard"
 date: 2014-01-05 10:49:46 +0100
 comments: true
-categories: [ bass ]
+categories: [ music, bass ]
 ---
 
 A bass fretboard for beginners.
