@@ -4,6 +4,7 @@ title: "Music Scales with d3.js"
 date: 2014-01-07 22:02:19 +0100
 comments: true
 categories: [ music, d3js ]
+resources: resources/2014-01-07-music-scales-with-d3js
 ---
 
 This post is a small example that uses [d3.js](http://d3js.org/) to dynamically shows different music scales. 
@@ -12,7 +13,7 @@ This post is a small example that uses [d3.js](http://d3js.org/) to dynamically 
 
 The following buttons allow you to switch from a music scale to the other and to rotate the notes.
 
-<link rel="stylesheet" type="text/css" href="{{ root_url }}/resources/2014-01-07-music-scales-with-d3js/style.css">
+<link rel="stylesheet" type="text/css" href="{{ root_url }}/{{ page.resources }}/style.css">
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
 <div id="d3js">
@@ -23,7 +24,7 @@ The following buttons allow you to switch from a music scale to the other and to
 	<button id="rotate">rotate</button>
 </div>
 
-<script type="text/javascript" src="{{ root_url }}/resources/2014-01-07-music-scales-with-d3js/scales.js"></script>
+<script type="text/javascript" src="{{ root_url }}/{{ page.resources }}/scales.js"></script>
 
 ## Some words about the implementation
 
