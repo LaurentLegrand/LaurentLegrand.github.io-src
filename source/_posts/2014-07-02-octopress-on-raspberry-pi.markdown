@@ -25,3 +25,8 @@ I've faced the following issues:
 
 The site generation is rather slow but it works!
 
+
+Last problem during `rake deploy` !
+Solved by http://stackoverflow.com/a/18037705
+
+
